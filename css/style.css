@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@400;500;600;700&family=Josefin+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
 html {
   box-sizing: border-box;
 }
@@ -6,6 +9,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -24,15 +29,158 @@ img {
 }
 
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 1320px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.aside{
+  position: fixed;
+  width: 260px;
+  height: 100%;
+  background-color: aqua;
+  transition: all 0.4s ease;
+}
+.aside__btn{
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 30px;
+  height: 30px;
+  background-color: #FA163F;
+  border: none;
+  z-index: 99;
+}
+.close.aside{
+  transform: translateX(-100%);
+}
+.open.main{
+  padding-left: 0;
+}
+main{
+  padding-left: 260px;
+  width: 100%;
+  min-height: 100vh;
+  transition: all 0.4s ease;
+}
+/* site-hero */
+#site-hero{
+  background-image: url("../img/a-more-purple-ish-version-of-the-mac-os-mojave--wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.site-hero__gray{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  opacity: 0.8;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+}
+.site-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 5;
+}
+.site-hero__pre-title {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  padding-bottom: 20px;
+  line-height: 2.75rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.site-hero__title {
+  font-family: 'Oswald', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 55px;
+}
+.site-hero__wrapper {
+  display: flex;
+}
+.static-text {
+  font-family: 'Oswald', sans-serif;
+  display: inline-block;
+  padding: .2em 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+  margin-right: 5px;
+}
+.site-hero__dynamic-texts {
+  position: relative;
+  top: 5px;
+  overflow: hidden;
+  height: 30px;
+  line-height: 30px;
+}
+.site-hero__dynamic-text {
+  text-align: left;
+  height: 30px;
+  position: relative;
+  top: 0;
+  line-height: 30px;
+  animation: slide 9s steps(3) infinite;
+}
+@keyframes slide{
+  100%{
+    top: -90px;
+  }
+}
+.site-hero__dynamic-text p{
+  font-family: 'Oswald', sans-serif;
+  color: #fa163f;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  display: inline;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  animation: wrapper 3s infinite;
+  border-right: 2px solid #fff;
+  overflow: hidden;
+}
+.site-hero__dynamic-text:nth-child(1) p{
+  letter-spacing: 2px;
+  font-style: 22px;
+}
+@keyframes wrapper{
+  0%{
+    width: 0;
+  }
+  50%{
+    width: 100%;
+  }
+  100%{
+    width: 0;
+  }
+}
+/* /site-hero */
 
 
 @media only screen and (min-width: 1200px) {
-  .container {
-    width: 1140px;
-  }
 }
