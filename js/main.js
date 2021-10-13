@@ -45,3 +45,16 @@ for (var r = document.querySelectorAll("a"), a = r.length - 1; a >= 0; a--) {
 function o(t) {
     t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
 }
+
+var typed = new Typed('.wrapper', {
+  strings:['Student','Developer' , 'Designer' , 'Freelancer'],
+  typeSpeed:70,
+  backSpeed:50,
+  loop:true
+});
+var typed = new Typed('.wrapper-scnd', {
+  strings:['Student','Developer' , 'Designer' , 'Freelancer'],
+  typeSpeed:70,
+  backSpeed:50,
+  loop:true
+});

@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -30,11 +32,11 @@
     <div class="aside__social social">
       <h3 class="social__static-text">Follow me</h3>
       <ul class="social__list">
-        <li class="social__item"><a class="social__link" href="#"><i class='bx bxl-facebook'></i></a></li>
-        <li class="social__item"><a class="social__link" href="#"><i class='bx bxl-twitter'></i></a></li>
-        <li class="social__item"><a class="social__link" href="#"><i class='bx bxl-linkedin'></i></a></li>
-        <li class="social__item"><a class="social__link" href="#"><i class='bx bxl-behance'></i></a></li>
-        <li class="social__item"><a class="social__link" href="#"><i class='bx bxl-dribbble'></i></a></li>
+        <li class="social__item"><a class="social__link" href="#" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+        <li class="social__item"><a class="social__link" href="#" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+        <li class="social__item"><a class="social__link" href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+        <li class="social__item"><a class="social__link" href="#" target="_blank"><i class='bx bxl-behance'></i></a></li>
+        <li class="social__item"><a class="social__link" href="#" target="_blank"><i class='bx bxl-dribbble'></i></a></li>
       </ul>
     </div>
     <p class="aside__copyright">© 2020 All Rights Reserved</p>
@@ -49,12 +51,103 @@
           <h2 class="site-hero__title">I'M RAVSHAN</h2>
           <div class="site-hero__wrapper">
             <p class="static-text">I'm </p>
-            <ul class="site-hero__dynamic-texts">
-              <li class="site-hero__dynamic-text"><p>Developer</p></li>
-              <li class="site-hero__dynamic-text"><p>Freelancer</p></li>
-              <li class="site-hero__dynamic-text"><p>Programmer</p></li>
+            <span class="wrapper"></span>
+          </div>
+          <a class="site-hero__btn btn" href="#">Hire Me</a>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container">
+        <div class="about">
+          <div class="about__texts">
+            <h2 class="about__title titles">About</h2>
+            <div class="site-hero__wrapper">
+              <p class="static-text">I'm </p>
+              <span class="wrapper-scnd"></span>
+            </div>
+            <p class="about__static-text">Hi! My name is JOHN SMITH. I am a Web Developer, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, voluptate, excepturi. Natus, numquam consectetur id enim corporis eos itaque deleniti ab. Facere illum quo inventore deserunt asperiores perferendis natus. Corporis!</p>
+            <div class="about__btns">
+              <a class="about__btn btn" href="#">Hire Me</a>
+              <a class="about__btn-fulled btn" href="#">Download CV</a>
+            </div>
+            <ul class="about__list">
+              <li class="about__item">
+                <a class="about__link" href="tel:+998996021506">
+                  <span class="about__span"><i class="fas fa-phone"></i></span>
+                  <h3 class="about__text">Phone</h3>
+                  <p class="about__tel-number">+998 99 602 15 06</p>
+                </a>
+              </li>
+              <li class="about__item">
+                <a class="about__link" href="mailto: irwins1337@gmail.com">
+                  <span class="about__span"><i class="fas fa-envelope"></i></span>
+                  <h3 class="about__text">Email</h3>
+                  <p class="about__tel-number">irwins1337@gmail.com</p>
+                </a>
+              </li>
             </ul>
           </div>
+          <div class="about__imgs">
+            <img class="about__img" src="https://amirayhan.github.io/tulsa/images/about/about.jpg" alt="about__img">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="container">
+        <div class="services">
+          <h2 class="services__title titles">Services</h2>
+          <ul class="services__list">
+            <li class="services__item">
+              <div class="services__titles">
+                <span class="services__before"><svg class="svg-inline--fa fa-desktop fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="desktop" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z"></path></svg></span>
+                <span class="services__number">01</span>
+                <h4 class="services__static-title">Web Design</h4>
+              </div>
+              <p class="services__static-text">Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium ad adip ipsum dolor.</p>
+            </li>
+            <li class="services__item">
+              <div class="services__titles">
+                <span class="services__before"><svg class="svg-inline--fa fa-code fa-w-20" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="code" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg></span>
+                <span class="services__number">02</span>
+                <h4 class="services__static-title">Web Developement</h4>
+              </div>
+              <p class="services__static-text">Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium ad adip ipsum dolor.</p>
+            </li>
+            <li class="services__item">
+              <div class="services__titles">
+                <span class="services__before"><svg class="svg-inline--fa fa-crop-alt fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="crop-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M488 352h-40V96c0-17.67-14.33-32-32-32H192v96h160v328c0 13.25 10.75 24 24 24h48c13.25 0 24-10.75 24-24v-40h40c13.25 0 24-10.75 24-24v-48c0-13.26-10.75-24-24-24zM160 24c0-13.26-10.75-24-24-24H88C74.75 0 64 10.74 64 24v40H24C10.75 64 0 74.74 0 88v48c0 13.25 10.75 24 24 24h40v256c0 17.67 14.33 32 32 32h224v-96H160V24z"></path></svg><!-- <i class="fas fa-crop-alt"></i> --></span>
+                <span class="services__number">03</span>
+                <h4 class="services__static-title">Graphic Design</h4>
+              </div>
+              <p class="services__static-text">Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium ad adip ipsum dolor.</p>
+            </li>
+            <li class="services__item">
+              <div class="services__titles">
+                <span class="services__before"><svg class="svg-inline--fa fa-camera fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="camera" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M512 144v288c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V144c0-26.5 21.5-48 48-48h88l12.3-32.9c7-18.7 24.9-31.1 44.9-31.1h125.5c20 0 37.9 12.4 44.9 31.1L376 96h88c26.5 0 48 21.5 48 48zM376 288c0-66.2-53.8-120-120-120s-120 53.8-120 120 53.8 120 120 120 120-53.8 120-120zm-32 0c0 48.5-39.5 88-88 88s-88-39.5-88-88 39.5-88 88-88 88 39.5 88 88z"></path></svg><!-- <i class="fas fa-camera"></i> --></span>
+                <span class="services__number">04</span>
+                <h4 class="services__static-title">Photography</h4>
+              </div>
+              <p class="services__static-text">Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium ad adip ipsum dolor.</p>
+            </li>
+            <li class="services__item">
+              <div class="services__titles">
+                <span class="services__before"><svg class="svg-inline--fa fa-mobile-alt fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="mobile-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"></path></svg><!-- <i class="fas fa-mobile-alt"></i> --></span>
+                <span class="services__number">05</span>
+                <h4 class="services__static-title">Mobile Apps</h4>
+              </div>
+              <p class="services__static-text">Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium ad adip ipsum dolor.</p>
+            </li>
+            <li class="services__item">
+              <div class="services__titles">
+                <span class="services__before"><svg class="svg-inline--fa fa-rocket fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rocket" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path></svg><!-- <i class="fas fa-rocket"></i> --></span>
+                <span class="services__number">06</span>
+                <h4 class="services__static-title">Branding</h4>
+              </div>
+              <p class="services__static-text">Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Accusan tium ad adip ipsum dolor.</p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
