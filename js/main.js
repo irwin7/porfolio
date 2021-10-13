@@ -6,5 +6,8 @@ elAsideBtn.addEventListener('click' , function(){
   elAside.classList.toggle('close')
 })
 elAsideBtn.addEventListener('click' , function(){
+  elAsideBtn.classList.toggle('close')
+})
+elAsideBtn.addEventListener('click' , function(){
   elMain.classList.toggle('open')
 })

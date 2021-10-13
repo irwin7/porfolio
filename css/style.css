@@ -13,13 +13,18 @@ html {
   margin: 0;
 }
 
+:root{
+  --color-fa163f : #fa163f;
+  --color-0c0c0c : #0c0c0c;
+}
+
 body {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: var(--color-0c0c0c);
   font-family: sans-serif;
 }
 
@@ -46,18 +51,36 @@ a{
   position: fixed;
   width: 260px;
   height: 100%;
-  background-color: aqua;
+  background-color: var(--color-0c0c0c);
   transition: all 0.4s ease;
 }
 .aside__btn{
   position: fixed;
-  top: 50px;
-  left: 50px;
+  top: 30px;
+  left: 230px;
   width: 30px;
   height: 30px;
-  background-color: #FA163F;
+  background-color: var(--color-fa163f);
   border: none;
   z-index: 99;
+  color: #fff;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+  transform: translateX(0);
+}
+.aside__btn .bx{
+  transition-delay: 0.4s;
+}
+.close.aside__btn .bx{
+  transform: rotate(180deg);
+}
+.close.aside__btn{
+  transform: translateX(-260px);
+  left: 270px;
+  transition: left 0.3s 0.3s;
 }
 .close.aside{
   transform: translateX(-100%);
@@ -152,7 +175,7 @@ main{
 }
 .site-hero__dynamic-text p{
   font-family: 'Oswald', sans-serif;
-  color: #fa163f;
+  color: var(--color-fa163f);
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 1px;
