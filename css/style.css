@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
 html {
   box-sizing: border-box;
+  cursor: none;
 }
 
 *,
@@ -16,6 +17,13 @@ html {
 :root{
   --color-fa163f : #fa163f;
   --color-0c0c0c : #0c0c0c;
+  --white : #fff;
+  --black : #000;
+  --font-josefin : 'Josefin Sans', sans-serif;;
+  --font-open : 'Open Sans', sans-serif;
+  --font-georama : 'Georama', sans-serif;
+  --font-oswald : 'Oswald', sans-serif;
+  --color-bbb : #bbb;
 }
 
 body {
@@ -47,6 +55,7 @@ ul{
 a{
   text-decoration: none;
 }
+/* aside */
 .aside{
   position: fixed;
   width: 260px;
@@ -63,7 +72,7 @@ a{
   background-color: var(--color-fa163f);
   border: none;
   z-index: 99;
-  color: #fff;
+  color: var(--white);
   font-size: 25px;
   display: flex;
   align-items: center;
@@ -94,7 +103,146 @@ main{
   min-height: 100vh;
   transition: all 0.4s ease;
 }
+.aside {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 45px;
+}
+.aside__logo-div {
+  padding-bottom: 80px;
+}
+.aside__logo-link {
+  font-family: var(--font-josefin);
+  font-size: 20px;
+  color: var(--white);
+}
+.aside__logo-link span{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-fa163f);
+}
+.aside__logo {
+  padding: 0;
+  margin: 0;
+}
+.aside__title {
+  font-family: var(--font-open);
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 5px;
+  padding-left: 10px;
+  font-weight: 400;
+  color: var(--color-bbb);
+}
+.nav__list {
+  margin-bottom: 50px;
+}
+.nav__item {
+  padding: 7px 0;
+}
+.nav__link {
+  color: var(--white);
+  font-weight: 600;
+  transition: all linear 0.4s;
+  letter-spacing: 1px;
+  font-family: var(--font-open);
+  font-size: 15px;
+  line-height: 1.75rem;
+  transition: all 0.4s ease;
+}
+.nav__link:hover{
+  color: var(--color-fa163f);
+}
+.social__static-text {
+  padding-bottom: 1rem;
+  font-family: var(--white);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--color-bbb);
+}
+.social__list {
+  display: flex;
+}
+.social__link {
+  width: 23px;
+  height: 23px;
+  background-color: var(--color-fa163f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  border: 2px solid var(--color-fa163f);
+  font-size: 13px;
+  margin: 0 5px;
+  transition: all 0.4s ease;
+}
+.social__link:hover{
+  color: var(--color-fa163f);
+  background-color: transparent;
+}
+.aside__copyright {
+  padding-top: 10px;
+  font-size: 12px;
+  line-height: 2.75rem;
+  cursor: none;
+  font-family: var(--font-open);
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--color-bbb);
+}
+/* /aside */
+/* cursor */
+.cursor,
+.cursor2,
+.cursor3{
+	position: fixed;
+	border-radius: 50%;	
+	transform: translateX(-50%) translateY(-50%);
+	pointer-events: none;
+	left: -100px;
+	top: 50%
+}
+.cursor{
+	background-color: #fff;
+	height: 6px;
+	width: 6px;
+	z-index: 99999;
+  pointer-events: none;
+  
+}
+.cursor2,.cursor3{
+	height: 36px;
+	width: 36px;
+	z-index:99998;
+	transition:all 0.2s ease-out
+}
+.cursor2.hover,
+.cursor3.hover{
+	-webkit-transform:scale(2) translateX(-25%) translateY(-25%);
+	transform:scale(2) translateX(-25%) translateY(-25%);
+	border:none
+}
+.cursor2{
+	border: 2px solid #fff;
+	box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
+}
+.cursor2.hover{
+	background: rgba(255,255,255,.1);
+	box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+/* /cursor */
 /* site-hero */
+.particles-js-canvas-el{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
 #site-hero{
   background-image: url("../img/a-more-purple-ish-version-of-the-mac-os-mojave--wallpaper.jpg");
   background-size: cover;
@@ -104,7 +252,7 @@ main{
 .site-hero__gray{
   width: 100%;
   min-height: 100vh;
-  background-color: #000;
+  background-color: var(--black);
   opacity: 0.8;
   display: inline-block;
   position: absolute;
@@ -120,9 +268,10 @@ main{
   position: relative;
   z-index: 5;
 }
+
 .site-hero__pre-title {
-  color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  color: var(--white);
+  font-family: var(--font-open);
   font-size: 24px;
   padding-bottom: 20px;
   line-height: 2.75rem;
@@ -130,11 +279,11 @@ main{
   letter-spacing: 1px;
 }
 .site-hero__title {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-oswald);
   padding-top: 20px;
   padding-bottom: 30px;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--white);
   line-height: 1.75rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -144,13 +293,13 @@ main{
   display: flex;
 }
 .static-text {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-oswald);
   display: inline-block;
   padding: .2em 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
-  color: #fff;
+  color: var(--white);
   margin-right: 5px;
 }
 .site-hero__dynamic-texts {
@@ -174,7 +323,7 @@ main{
   }
 }
 .site-hero__dynamic-text p{
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-oswald);
   color: var(--color-fa163f);
   font-size: 20px;
   line-height: 1.2;
@@ -184,7 +333,7 @@ main{
   position: relative;
   display: inline-block;
   animation: wrapper 3s infinite;
-  border-right: 2px solid #fff;
+  border-right: 2px solid var(--white);
   overflow: hidden;
 }
 .site-hero__dynamic-text:nth-child(1) p{
@@ -205,5 +354,54 @@ main{
 /* /site-hero */
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
+  
+}
+@media only screen and (max-width: 1100px) {
+
+}
+@media only screen and (max-width: 992px) {
+  .aside{
+    transform: translateX(-100%);
+    z-index: 20;
+  }
+  .close.aside{
+    transform: translateX(0);
+  }
+  main{
+    padding-left: 0;
+  }
+  .close.aside__btn{
+    transform: translateX(-10px);
+    transition: left 0.3s ,
+    transform 0.3s;
+  }
+  .aside__btn{
+    transform: translateX(-260px);
+    left: 260px;
+  }
+  .close.aside__btn .bx{
+    transform: rotate(0deg);  
+    transition-delay: 0.4s;
+  }
+  .aside__btn .bx{
+    transform: rotate(180deg);
+  }
+  .aside{
+    overflow: scroll;
+  }
+  .cursor,
+  .cursor2,
+  .cursor{
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+
+}
+@media only screen and (max-width: 554px) {
+
+}
+@media only screen and (max-width: 768px) {
+
 }
