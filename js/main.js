@@ -58,3 +58,80 @@ var typed = new Typed('.wrapper-scnd', {
   backSpeed:50,
   loop:true
 });
+
+
+
+let array = [
+  {
+    id:1,
+    category:'Best',
+    link:'https://festive-swirles-1e14c5.netlify.app',
+    text:'Sinauw',
+    img:'../img/screencapture-festive-swirles-1e14c5-netlify-app-2021-10-14-11_07_50.png'
+  },
+  {
+    id:2,
+    category:'Not-ready',
+    link:'https://hardcore-keller-5b1267.netlify.app',
+    text:'Creative Chair',
+    img:'../img/screencapture-hardcore-keller-5b1267-netlify-app-2021-10-14-11_08_12.png'
+  },
+  {
+    id:3,
+    category:'Not-ready',
+    link:'https://cocky-yonath-8ca69a.netlify.app',
+    text:'My Team',
+    img:'../img/screencapture-cocky-yonath-8ca69a-netlify-app-2021-10-14-11_05_45.png'
+  },
+  {
+    id:4,
+    category:'Favorites',
+    link:'https://dogs-irwin.netlify.app',
+    text:'Dogs',
+    img:'../img/screencapture-dogs-irwin-netlify-app-2021-10-14-11_09_45.png'
+  },
+  {
+    id:5,
+    category:'Best',
+    link:'https://pixer-irwin.netlify.app',
+    text:'Pixer',
+    img:'../img/screencapture-pixer-irwin-netlify-app-2021-10-14-11_09_19.png'
+  },
+  {
+    id:6,
+    category:'Favorites',
+    link:'https://happy-jennings-cda530.netlify.app',
+    text:'Arun Roy',
+    img:'../img/screencapture-happy-jennings-cda530-netlify-app-2021-10-14-11_06_46.png'
+  },
+]
+let global = document.querySelector('.portfolio__list')
+let template = document.querySelector('.template').content;
+function getItems (element){
+  array.forEach((item) => {
+    if(element == item.category){
+      sortItem(item)
+    }else if(element == 'All'){
+      sortItem(item)
+    }
+  })
+}
+array.forEach((i) => {
+  sortItem(i)
+})
+function sortItem (item){
+  let newTemp = template.cloneNode(true)
+  newTemp.querySelector('.portfolio__item').style.backgroundImage = `url(${item.img})`
+  newTemp.querySelector('.portfolio__link').href = item.link
+  newTemp.querySelector('.portfolio__text').textContent = item.text
+  newTemp.querySelector('.portfolio__static-text').textContent = item.category
+  global.append(newTemp)
+}
+let arrSort = document.querySelectorAll('.sort')
+arrSort.classList.add("dunny")
+arrSort.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    global.innerHTML = null
+    getItems(event.target.dataset.id)
+  })
+})
