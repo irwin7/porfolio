@@ -128,7 +128,6 @@ function sortItem (item){
   global.append(newTemp)
 }
 let arrSort = document.querySelectorAll('.sort')
-arrSort.classList.add("dunny")
 arrSort.forEach((item) => {
   item.addEventListener('click', (event) => {
     global.innerHTML = null

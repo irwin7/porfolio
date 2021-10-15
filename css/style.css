@@ -623,9 +623,6 @@ main{
 .sort:hover{
   color: var(--color-fa163f);
 }
-.funny{
-  color: var(--color-fa163f);
-}
 .sort:not(:first-child){
   padding-left: 20px;
 }
@@ -637,13 +634,12 @@ main{
   right: -10px;
   width: 2px;
   height: 15px;
-  background: #fa163f;
+  background: var(--color-fa163f);
   transform: translateY(-50%);
 }
 .portfolio__list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
 }
 .portfolio__item {
   width: calc(33.33% - 30px);
@@ -770,11 +766,6 @@ main{
 }
 /* /portfolio */
 
-
-/* keyframes */
-
-/* /keyframes */
-
 /* media */
 
 @media only screen and (max-width: 1200px) {
@@ -893,7 +884,4 @@ main{
   .about__imgs{
     width: 100%;
   }
-}
-@media only screen and (max-width: 768px) {
-
 }
