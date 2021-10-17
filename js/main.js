@@ -47,13 +47,13 @@ function o(t) {
 }
 
 var typed = new Typed('.wrapper', {
-  strings:['Student','Developer' , 'Designer' , 'Freelancer'],
+  strings:['Student','Developer' , 'Designer' , 'Ravshan' , 'Freelancer'],
   typeSpeed:70,
   backSpeed:50,
   loop:true
 });
 var typed = new Typed('.wrapper-scnd', {
-  strings:['Student','Developer' , 'Designer' , 'Freelancer'],
+  strings:['Student','Developer' , 'Designer' , 'Ravshan' , 'Freelancer'],
   typeSpeed:70,
   backSpeed:50,
   loop:true

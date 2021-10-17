@@ -4,6 +4,7 @@
 html {
   box-sizing: border-box;
   cursor: none;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -765,7 +766,194 @@ main{
   height: 1rem;
 }
 /* /portfolio */
-
+/* tecnologies */
+#technologies{
+  background-color: var(--color-0c0c0c);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.slick-track{
+  
+  display: flex;
+  align-items: center;
+}
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slick-dots li{
+  margin: 5px;
+}
+.slick-dots button{
+  border: none;
+  font-size: 0;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  background-color: var(--black);
+  border-radius: 50%;
+  border: 1px solid var(--white);
+}
+.slick-dots .slick-active button{
+  background-color: var(--white);
+}
+.slick-list{
+  overflow: hidden;
+}
+.technologies__item {
+  width: 270px;
+  height: 268px;
+  margin: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/bootstrap-5.svg");
+}
+.c{
+  background-image: url("../img/c.svg");
+}
+.javascript{
+  background-image: url("../img/logo-javascript.svg");
+}
+.html5{
+  background-image: url("../img/html-2.svg");
+}
+.python{
+  background-image: url("../img/python-5.svg");
+}
+.react{
+  background-image: url("../img/react-2.svg");
+}
+.sass{
+  background-image: url("../img/sass-1.svg");
+}
+/* /tecnologies */
+/* contact */
+.contact {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.contact-hero {
+  display: flex;
+  flex-flow: row wrap;
+}
+.info {
+  background-color: var(--color-0c0c0c);
+  padding: 30px;
+  margin-right: 15px;
+  width: calc(50% - 15px);
+  margin: 0 auto;
+}
+.info__title {
+  font-size: 20px;
+  margin: 0;
+  color: var(--white);
+  font-family: var(--font-oswald);
+  line-height: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.info__text {
+  line-height: 1.5rem;
+  font-family: var(--font-open);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--color-bbb);
+}
+.info__list {
+  padding-top: 20px;
+}
+.info__item {
+  margin-bottom: 10px;
+}
+.info__link {
+  display: flex;
+  align-items: center;
+  color: var(--color-bbb);
+  font-family: var(--font-open);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+}
+.info__link:hover .info__icon{
+  background-color: transparent;
+  border-color: var(--color-fa163f);
+  color: var(--white);
+}
+.info__link:hover .info__static-text{
+  color: var(--white);
+}
+.info__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  line-height: 35px;
+  transition: all 0.4s ease-in-out;
+  background: var(--color-fa163f);
+  border: 2px solid transparent;
+}
+.info__icon svg{
+  width: 1em;
+  height: 1em;
+}
+.info__static-text {
+  transition: all 0.4s ease-in-out;
+}
+.forms {
+  width: 50%;
+}
+.inputs {
+  color: var(--white);
+  background: #000000;
+  width: 100%;
+  min-height: 45px;
+  padding: 0 0 0 10px;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 29px;
+  border: none;
+  border: 1px solid #141414;
+  text-shadow: none;
+}
+.inputs::placeholder{
+  color: #555;
+}
+.forms__textarea {
+  padding-top: 10px;
+}
+/* /contact */
+/* footer */
+.site-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 100px;
+  background-color: var(--color-0c0c0c);
+}
+/* /footer */
+.btn-up{
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 15px;
+  border: 2px solid var(--color-fa163f);
+  background-color: var(--color-0c0c0c);
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
 /* media */
 
 @media only screen and (max-width: 1200px) {
@@ -820,6 +1008,13 @@ main{
   }
   .references__item:last-child{
     margin: 0 auto;
+  }
+  .info{
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  .forms{
+    width: calc(100% - 15px);
   }
 }
 @media only screen and (max-width: 768px) {
